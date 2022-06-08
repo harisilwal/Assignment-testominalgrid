@@ -1,0 +1,95 @@
+.container {
+    display: grid;
+    gap: 15px 15px;
+    margin: 100px;
+    height: 60vh;
+    background-color: hsl(0, 0%, 81%);
+    padding: 70px;
+    width: 60%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(8, 180px);
+        height: 1600px;
+        grid-template-areas: "daniel" "daniel" "jonathan" "jeanette" "patrick" "patrick" "kira" "kira";
+    }
+}
+
+.testimony {
+    border-radius: 12px;
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment1 {
+    grid-area: daniel;
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+}
+
+.comment2 {
+    grid-area: jonathan;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.comment3 {
+    grid-area: kira;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.comment4 {
+    grid-area: jeanette;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.comment5 {
+    grid-area: patrick;
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.intro {
+    display: flex;
+}
+
+.profileDetails>h5,
+.profileDetails>h6 {
+    text-decoration: none;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.profileDetails>h6 {
+    opacity: 50%;
+}
+
+.profilepic>img {
+    border-radius: 50%;
+    margin: 0px;
+    height: 30px;
+}
+
+.titleTestomonial {
+    font-size: 20px;
+}
+
+.commentTestomonial {
+    opacity: 50%;
+}
